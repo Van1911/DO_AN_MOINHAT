@@ -75,12 +75,12 @@
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="-50dp"
         android:layout_marginRight="20dp"
         android:layout_weight="1"
-        android:background="@drawable/corner_r"
+        android:background="@drawable/corner_rounded"
         android:backgroundTint="#ffcf09"
-        android:orientation="horizontal"
-        android:translationY="-50dp">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnVetau"
@@ -116,13 +116,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
         android:layout_weight="0"
         android:background="@drawable/vien_layout">
 
         <Button
-            android:id="@+id/btnNgayKhoiHanh"
+            android:id="@+id/btnNoiDen"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginLeft="40dp"
@@ -134,7 +134,7 @@
             android:textSize="22dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2" />
+            app:layout_constraintTop_toBottomOf="@+id/btnNoiDi" />
 
         <TextView
             android:id="@+id/textView2"
@@ -150,7 +150,7 @@
             app:layout_constraintVertical_bias="0.522" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnNoiDi"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginLeft="40dp"
@@ -185,7 +185,7 @@
             android:layout_marginLeft="15dp"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button2"
+            app:layout_constraintEnd_toStartOf="@+id/btnNoiDi"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -245,7 +245,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2" />
+            app:layout_constraintTop_toBottomOf="@+id/btnNoiDi" />
 
     </LinearLayout>
 
@@ -264,8 +264,11 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="-50dp"
         android:layout_weight="0"
         android:background="@color/background"
+
         app:menu="@menu/bottom_navigation" />
 
 </LinearLayout>
