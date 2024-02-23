@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TaiKhoan_Activity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/yellow">
+            <Button
+                android:id="@+id/Signin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/corner_rounded_yellow"
+                android:backgroundTint="@null"
+                android:text="Bạn chưa đăng nhập? \nĐăng nhập ngay "
+                android:textAlignment="textStart"
+                android:textSize="20dp"
+                android:drawableRight="@drawable/baseline_person_outline_24"
+                />
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/yellow">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_login_ui"
+                android:backgroundTint="@color/white"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <Button
+                    android:id="@+id/Introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="10dp"
+                    android:backgroundTint="@color/grey"
+                    android:drawableLeft="@drawable/outline_recommend_24"
+                    android:drawableRight="@drawable/baseline_chevron_right_24"
+                    android:padding="20dp"
+                    android:text="Giới thiệu SaiGon Waterbus"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/Rules"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:backgroundTint="@color/grey"
+                    android:drawableLeft="@drawable/baseline_diversity_2_24"
+                    android:drawableRight="@drawable/baseline_chevron_right_24"
+                    android:padding="20dp"
+                    android:text="Điều Khoản sử dụng"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/Setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:backgroundTint="@color/grey"
+                    android:drawableLeft="@drawable/baseline_app_settings_alt_24"
+                    android:drawableRight="@drawable/baseline_chevron_right_24"
+                    android:padding="20dp"
+                    android:text="Cài đặt"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/Ctyname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="CÔNG TY TNHH THƯỜNG NHẬT"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/Ctyname1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="30dp"
+                    android:text="Giấy CNDK DN số: 0304354924 cấp ngày 05/05/2006 tại Sở kế hoạch và đầu tư Tp.Hồ Chí Minh."
+                    android:textColor="@color/strongrey"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/System"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp"
+                    android:text="Hệ thống văn phòng"
+                    android:textFontWeight="1"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/System1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:drawableLeft="@drawable/baseline_place_24"
+                    android:paddingLeft="30dp"
+                    android:text="6 Phan Kế Bính, phường Đa Kao, Quận 1, Tp.Hồ Chí Minh"
+                    android:textColor="@color/strongrey"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/Contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp"
+                    android:text="Thông tin liên hệ"
+                    android:textFontWeight="1"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/Contact1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="30dp"
+                    android:text="Tổng đài hổ trợ: 1900636830 \n Website: http://saigonwaterbus.com \n Website: http://saigonwaterbus.com"
+                    android:textColor="@color/strongrey"
+                    android:textSize="16dp" />
+
+
+                <Button
+                    android:id="@+id/Btncontact"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/corner_rounded_yellow"
+                    android:text="Liên hệ"
+                    android:textColor="@color/yellow"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

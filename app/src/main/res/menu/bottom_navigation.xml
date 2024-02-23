@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/navbottom_home"
+        android:title="@string/trangchu_Fragment" />
+    <item
+        android:id="@+id/mnTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/navbottom_ticket"
+        android:title="@string/ticket_Fragment" />
+    <item
+        android:id="@+id/mnAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/navbottom_account_24"
+        android:title="@string/account_Fragment" />
+</menu>

@@ -2,4 +2,7 @@
     <string name="app_name">DO_AN</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="trangchu_Fragment">Trang chủ</string>
+    <string name="ticket_Fragment">Vé của tôi</string>
+    <string name="account_Fragment">Tài khoản</string>
 </resources>
