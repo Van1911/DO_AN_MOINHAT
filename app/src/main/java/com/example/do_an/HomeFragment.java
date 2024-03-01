@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.do_an.databinding.FragmentHomeBinding;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link HomeFragment#newInstance} factory method to
@@ -22,6 +24,7 @@ public class HomeFragment extends Fragment {
     ImageButton btnTaiKhoan;
     Button btnNoiDi;
     Button btnNoiDen;
+FragmentHomeBinding binding;
     @SuppressLint("NonConstantResourceId")
 
     // TODO: Rename parameter arguments, choose names that match
@@ -74,14 +77,14 @@ public class HomeFragment extends Fragment {
         btnNoiDi=view.findViewById(R.id.btnNoiDi);
         btnNoiDen=view.findViewById(R.id.btnNoiDen);
 
+
+
         btnTaiKhoan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getActivity(),TaiKhoan_Activity.class);
-                i.putExtra("","");
-                startActivity(i);
+                TaiKhoanFragment TaiKhoanFragment=new TaiKhoanFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,TaiKhoanFragment).commit();
             }
-
         });
         btnTimKiem.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,7 +112,6 @@ public class HomeFragment extends Fragment {
                 startActivity(i);
             }
         });
-
         return view;
     }
 }

@@ -54,7 +54,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Xin chao!"
+                android:text="Xin chào!"
                 android:textColor="@color/white"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -70,41 +70,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="35dp"
         android:layout_marginTop="-50dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="35dp"
         android:layout_weight="0"
         android:background="@drawable/corner_rounded"
         android:backgroundTint="#ffcf09"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnVetau"
-            android:layout_width="wrap_content"
-            android:layout_height="90dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/corner_rounded"
-            android:rotationX="5"
-            android:text="SaiGon WaterBus "
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1">
 
-            android:textColor="@color/white"
-            android:textSize="15dp" />
-
-        <Button
-            android:id="@+id/btnTour"
-            android:layout_width="wrap_content"
-            android:layout_height="90dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="15dp"
-            android:layout_weight="1"
-            android:backgroundTint="#ffcf09"
-            android:rotationX="5"
-            android:text="SaiGon WaterGo"
-            android:textSize="15dp" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/corner_rounded"
+                android:fontFamily="@font/akronim"
+                android:gravity="center"
+                android:text="Saigon WaterBus"
+                android:textColor="@color/black"
+                android:textSize="35dp" />
+        </FrameLayout>
 
     </LinearLayout>
 

@@ -1,5 +1,6 @@
 package com.example.do_an;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -16,6 +17,7 @@ import android.widget.Button;
  * create an instance of this fragment.
  */
 public class TaiKhoanFragment extends Fragment {
+
 
     Button btnSetting;
     // TODO: Rename parameter arguments, choose names that match
@@ -57,6 +59,7 @@ public class TaiKhoanFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -70,7 +73,8 @@ public class TaiKhoanFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     Intent i = new Intent(getActivity(),SettingActivity.class);
-
+                    i.putExtra("","");
+                    startActivity(i);
                 }
             });
 
@@ -79,4 +83,5 @@ public class TaiKhoanFragment extends Fragment {
         // Inflate the layout for this fragment
         return view;
     }
+
 }
