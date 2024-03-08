@@ -1,18 +1,31 @@
 package com.example.do_an;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
-import com.example.do_an.databinding.FragmentHomeBinding;
+
+import java.util.Calendar;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,7 +37,10 @@ public class HomeFragment extends Fragment {
     ImageButton btnTaiKhoan;
     Button btnNoiDi;
     Button btnNoiDen;
-FragmentHomeBinding binding;
+    Button btnNgayKH;
+
+    private DatePickerDialog.OnDateSetListener dateSetListener;
+Context context;
     @SuppressLint("NonConstantResourceId")
 
     // TODO: Rename parameter arguments, choose names that match
@@ -40,15 +56,7 @@ FragmentHomeBinding binding;
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
+
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
@@ -72,25 +80,44 @@ FragmentHomeBinding binding;
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         // Inflate the layout for this fragment
-        btnTimKiem=view.findViewById(R.id.btnTimKiem);
-        btnTaiKhoan=view.findViewById(R.id.btnTaiKhoan);
-        btnNoiDi=view.findViewById(R.id.btnNoiDi);
-        btnNoiDen=view.findViewById(R.id.btnNoiDen);
+        btnTimKiem = view.findViewById(R.id.btnTimKiem);
+        btnTaiKhoan = view.findViewById(R.id.btnTaiKhoan);
+        btnNoiDi = view.findViewById(R.id.btnNoiDi);
+        btnNoiDen = view.findViewById(R.id.btnNoiDen);
 
-
-
+        btnNgayKH=view.findViewById(R.id.btnNgayKH);
+        btnNgayKH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+Calendar kal=Calendar.getInstance();
+int year=kal.get(Calendar.YEAR);
+int month=kal.get(Calendar.MONTH);
+int day=kal.get(Calendar.DAY_OF_MONTH);
+DatePickerDialog dialog =new DatePickerDialog(getContext(),android.R.style.Theme_DeviceDefault_Dialog,dateSetListener,year,month,day);
+                dialog.show();
+            }
+        });
+dateSetListener=new DatePickerDialog.OnDateSetListener() {
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        month=month+1;
+        Log.d(TAG, "onDateSet: mm/dd/yyyy" + dayOfMonth + "/" + month + "/" + year);
+        String date="Ngày khởi hành: "+ dayOfMonth + "/" + month + "/" + year;
+        btnNgayKH.setText(date);
+    }
+};
         btnTaiKhoan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TaiKhoanFragment TaiKhoanFragment=new TaiKhoanFragment();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,TaiKhoanFragment).commit();
+                TaiKhoanFragment TaiKhoanFragment = new TaiKhoanFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, TaiKhoanFragment).commit();
             }
         });
         btnTimKiem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getActivity(),ActivityChuyenDi.class);
-                i.putExtra("","");
+                Intent i = new Intent(getActivity(), ActivityChuyenDi.class);
+                i.putExtra("", "");
                 startActivity(i);
             }
         });
@@ -99,19 +126,24 @@ FragmentHomeBinding binding;
         btnNoiDi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getActivity(),PlaceActivity.class);
-                i.putExtra("","");
+                Intent i = new Intent(getActivity(), PlaceActivity.class);
+                i.putExtra("", "");
                 startActivity(i);
             }
         });
         btnNoiDen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getActivity(),PlaceActivity.class);
-                i.putExtra("","");
+                Intent i = new Intent(getActivity(), PlaceActivity.class);
+                i.putExtra("", "");
                 startActivity(i);
             }
         });
-        return view;
+        return  view;
     }
+
 }
+
+
+
+
