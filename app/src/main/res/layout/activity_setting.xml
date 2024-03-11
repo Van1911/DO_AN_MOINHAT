@@ -17,7 +17,7 @@
         android:backgroundTint="@color/white">
 
         <Button
-            android:id="@+id/btnBack"
+            android:id="@+id/btnQuayLai"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/corner_rounded_yellow"

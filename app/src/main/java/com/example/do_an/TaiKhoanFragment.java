@@ -20,6 +20,7 @@ public class TaiKhoanFragment extends Fragment {
 
 
     Button btnSetting;
+    Button btnSignin;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -69,10 +70,19 @@ public class TaiKhoanFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_tai_khoan, container, false);
 
             btnSetting=view.findViewById(R.id.btnSetting);
+            btnSignin =view.findViewById(R.id.btnSignin);
+            btnSignin.setOnClickListener((new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(getActivity(),DangNhapActivity.class);
+                    i.putExtra("","");
+                    startActivity(i);
+                }
+            }));
             btnSetting.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(getActivity(),SettingActivity.class);
+                        Intent i = new Intent(getActivity(),SettingActivity.class);
                     i.putExtra("","");
                     startActivity(i);
                 }
