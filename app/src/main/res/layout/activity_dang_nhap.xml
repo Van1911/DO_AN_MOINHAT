@@ -15,11 +15,11 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnbackDN"
+            android:id="@+id/btnbackdn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
-            android:drawableLeft="@drawable/baseline_arrow_back_ios_new_24" />
+            android:drawableLeft="@drawable/baseline_arrow_back_ios_23" />
     </LinearLayout>
 
     <LinearLayout
@@ -52,6 +52,8 @@
             android:hint="Nhập username"
             android:inputType="text"
             android:paddingLeft="15dp"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
             android:textColorHint="#FFFFFF"
             android:textSize="18sp" />
     </LinearLayout>
@@ -71,6 +73,7 @@
             android:hint="Nhập password"
             android:inputType="text"
             android:paddingLeft="15dp"
+            android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
             android:textSize="18sp" />
     </LinearLayout>
