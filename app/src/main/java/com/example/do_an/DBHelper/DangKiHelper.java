@@ -46,4 +46,11 @@ db.execSQL("");
         if(cursor.getCount()>0)return true;
         else return false;
     }
+    public boolean checkAdmin(String userName,String passWord){
+        SQLiteDatabase myDB=this.getWritableDatabase();
+        Cursor cursor=myDB.rawQuery("select * from Account where userName = admin and passWord = admin",new String[]{userName,passWord});
+        if(cursor.getCount()>0)return true;
+        else return false;
+    }
+
 }

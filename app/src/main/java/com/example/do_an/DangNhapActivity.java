@@ -2,14 +2,18 @@ package com.example.do_an;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.do_an.DBHelper.DangKiHelper;
+
+import java.util.jar.Attributes;
 
 public class DangNhapActivity extends AppCompatActivity {
     Button btnDangKi;
@@ -18,6 +22,7 @@ public class DangNhapActivity extends AppCompatActivity {
     EditText edtUserName;
     EditText edtPassword;
 DangKiHelper dangkiHelper;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,12 +36,18 @@ dangkiHelper =new DangKiHelper(this);
         btnDangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+if(checkAdmin(edtUserName,edtPassword)){
+    Intent intent = new Intent(DangNhapActivity.this,AdminActivity.class);
+    startActivity(intent);
+}
                 boolean isLoggedID=dangkiHelper.checkUser(edtUserName.getText().toString(),edtPassword.getText().toString());
-                if(isLoggedID){
-                    Intent i = new Intent(DangNhapActivity.this,MainActivity.class);
-                    startActivity(i);
+               if(isLoggedID){
+                    Intent intent = new Intent(DangNhapActivity.this,MainActivity.class);
+                    startActivity(intent);
                 }
+
                 else Toast.makeText(DangNhapActivity.this,"Đăng nhập thất bại",Toast.LENGTH_LONG).show();
+
             }
         });
 btnDangKi=findViewById(R.id.btnDangKi);
@@ -56,7 +67,11 @@ btnDangKi.setOnClickListener(new View.OnClickListener() {
         });
 
     }
-
+public boolean checkAdmin(EditText edtUserName,EditText edtPassword){
+        if(edtUserName.getText().toString()=="admin"&& edtPassword.getText().toString()=="admin")
+        return true;
+        else return false;
+}
 
 
 }

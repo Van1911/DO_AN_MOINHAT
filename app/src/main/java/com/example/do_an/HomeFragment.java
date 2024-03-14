@@ -24,6 +24,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 
+import com.example.do_an.DBHelper.DangKiHelper;
+
 import java.util.Calendar;
 
 
@@ -38,7 +40,7 @@ public class HomeFragment extends Fragment {
     Button btnNoiDi;
     Button btnNoiDen;
     Button btnNgayKH;
-
+    Button btnAdmin;
     private DatePickerDialog.OnDateSetListener dateSetListener;
 Context context;
     @SuppressLint("NonConstantResourceId")
@@ -84,8 +86,15 @@ Context context;
         btnTaiKhoan = view.findViewById(R.id.btnTaiKhoan);
         btnNoiDi = view.findViewById(R.id.btnNoiDi);
         btnNoiDen = view.findViewById(R.id.btnNoiDen);
-
         btnNgayKH=view.findViewById(R.id.btnNgayKH);
+        btnAdmin=view.findViewById(R.id.btnAdmin);
+        btnAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getActivity(),AdminActivity.class);
+                startActivity(i);
+            }
+        });
         btnNgayKH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

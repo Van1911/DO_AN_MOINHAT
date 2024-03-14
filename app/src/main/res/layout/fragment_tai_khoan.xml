@@ -14,12 +14,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/yellow"
-            android:orientation="horizontal">
+            android:gravity="right"
+            android:orientation="vertical">
 
-            <Button
+            <TextView
                 android:id="@+id/btnSignin"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="30dp"
@@ -31,6 +32,15 @@
                 android:text="Bạn chưa đăng nhập? \nĐăng nhập ngay "
                 android:textAlignment="textStart"
                 android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/txtViewNAME"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1" />
 
         </LinearLayout>
     </FrameLayout>
