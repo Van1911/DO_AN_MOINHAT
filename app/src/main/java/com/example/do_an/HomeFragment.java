@@ -3,9 +3,7 @@ package com.example.do_an;
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.app.DatePickerDialog;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,14 +15,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
-
-import com.example.do_an.DBHelper.DangKiHelper;
 
 import java.util.Calendar;
 
@@ -36,7 +29,6 @@ import java.util.Calendar;
  */
 public class HomeFragment extends Fragment {
     Button btnTimKiem;
-    ImageButton btnTaiKhoan;
     Button btnNoiDi;
     Button btnNoiDen;
     Button btnNgayKH;
@@ -83,7 +75,6 @@ Context context;
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         // Inflate the layout for this fragment
         btnTimKiem = view.findViewById(R.id.btnTimKiem);
-        btnTaiKhoan = view.findViewById(R.id.btnTaiKhoan);
         btnNoiDi = view.findViewById(R.id.btnNoiDi);
         btnNoiDen = view.findViewById(R.id.btnNoiDen);
         btnNgayKH=view.findViewById(R.id.btnNgayKH);
@@ -115,13 +106,6 @@ dateSetListener=new DatePickerDialog.OnDateSetListener() {
         btnNgayKH.setText(date);
     }
 };
-        btnTaiKhoan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TaiKhoanFragment TaiKhoanFragment = new TaiKhoanFragment();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, TaiKhoanFragment).commit();
-            }
-        });
         btnTimKiem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
