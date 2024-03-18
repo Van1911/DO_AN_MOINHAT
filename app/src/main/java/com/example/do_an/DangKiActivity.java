@@ -22,28 +22,27 @@ public class DangKiActivity extends AppCompatActivity {
     EditText edtpassDK;
     Button btnDangKi;
     FirebaseAuth mAuth;
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
-            Intent intent=new Intent(getApplicationContext(),HomeFragment.class);
-            startActivity(intent);
-            finish();
-        }
-    }
+//    public void onStart() {
+//        super.onStart();
+//        // Check if user is signed in (non-null) and update UI accordingly.
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        if(currentUser != null){
+//            Intent intent=new Intent(getApplicationContext(),HomeFragment.class);
+//            startActivity(intent);
+//        }
+//    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_ki);
-        edtUserNameDK = findViewById(R.id.edtuserNameDK);
+        edtUserNameDK = findViewById(R.id.edtUserNameDK);
         edtpassDK = findViewById(R.id.edtPassDK);
         btnDangKi = findViewById(R.id.btnDangKi);
         mAuth=FirebaseAuth.getInstance();
         btnDangKi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email, pass;
+                String email,pass;
                 email = String.valueOf(edtUserNameDK.getText().toString());
                 pass = String.valueOf(edtpassDK.getText().toString());
 
@@ -58,20 +57,13 @@ public class DangKiActivity extends AppCompatActivity {
 
 
                 mAuth.createUserWithEmailAndPassword(email, pass)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(DangKiActivity.this, "Đăng kí thành công",
-                                            Toast.LENGTH_SHORT).show();
-                                    Intent i = new Intent(DangKiActivity.this,DangNhapActivity.class);
-                                    startActivity(i);
-                                    finish();
-
+                                    Toast.makeText(DangKiActivity.this, "Đăng kí tài khoản thành công", Toast.LENGTH_LONG).show();
                                 } else {
-                                    // If sign in fails, display a message to the user.
-                                    Toast.makeText(DangKiActivity.this, "Đăng kí thất bại",
-                                            Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(DangKiActivity.this, "Đăng kí tài khoản thất bại", Toast.LENGTH_LONG).show();
                                 }
                             }
                         });

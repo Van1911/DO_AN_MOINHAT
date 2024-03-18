@@ -23,6 +23,7 @@ public class DangNhapActivity extends AppCompatActivity {
     Button btnDangNhap;
     EditText edtUserName,edtPassword;
     FirebaseAuth mAuth;
+    Button btnForgotPass;
     @Override
     public void onStart() {
         super.onStart();
@@ -31,7 +32,6 @@ public class DangNhapActivity extends AppCompatActivity {
         if(currentUser != null){
             Intent intent=new Intent(getApplicationContext(),HomeFragment.class);
             startActivity(intent);
-            finish();
         }
     }
 
@@ -42,12 +42,19 @@ public class DangNhapActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_dang_nhap);
-        edtUserName = findViewById(R.id.edtUserName);
-        edtPassword = findViewById(R.id.edtPass);
+        edtUserName = findViewById(R.id.edtEmailLogin);
+        edtPassword = findViewById(R.id.edtPassLogin);
         btnDangNhap = findViewById(R.id.btnDangNhap);
+        btnDangKi = findViewById(R.id.btnDK);
+        btnForgotPass=findViewById(R.id.buttonForgotPassword);
+        btnForgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(DangNhapActivity.this,ForgotPassActivity.class);
+                startActivity(intent);
+            }
+        });
         mAuth=FirebaseAuth.getInstance();
-
-//        userManagement = new UserManagement(this);
         btnDangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,16 +88,16 @@ public class DangNhapActivity extends AppCompatActivity {
             }
 
         });
-        btnDangKi = findViewById(R.id.btnDangKi);
+
         btnDangKi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(DangNhapActivity.this, DangKiActivity.class);
-                i.putExtra("", "");
                 startActivity(i);
                 finish();
             }
         });
     }
+
 
 }

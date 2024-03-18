@@ -45,13 +45,10 @@ public class TaiKhoanFragment extends Fragment {
                         startActivity(i);
                     }
                     else {
-                        btnSignin.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Intent i = new Intent(getActivity(),TaiKhoanActivity.class);
-                                startActivity(i);
-                            }
-                        });
+
+                        Intent i = new Intent(getActivity(),TaiKhoanActivity.class);
+                        startActivity(i);
+
                     }
                 }
             }));
@@ -59,7 +56,7 @@ public class TaiKhoanFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                         Intent i = new Intent(getActivity(),SettingActivity.class);
-                    i.putExtra("","");
+
                     startActivity(i);
                 }
             });
