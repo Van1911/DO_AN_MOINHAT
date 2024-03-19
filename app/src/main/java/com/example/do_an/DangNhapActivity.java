@@ -40,7 +40,6 @@ public class DangNhapActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_dang_nhap);
         edtUserName = findViewById(R.id.edtEmailLogin);
         edtPassword = findViewById(R.id.edtPassLogin);
@@ -58,7 +57,7 @@ public class DangNhapActivity extends AppCompatActivity {
         btnDangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email, pass;
+                String email, pass ;
                 email = String.valueOf(edtUserName.getText().toString());
                 pass = String.valueOf(edtPassword.getText().toString());
 
@@ -76,7 +75,7 @@ public class DangNhapActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     Toast.makeText(getApplicationContext(),"Đăng nhập thành công",Toast.LENGTH_LONG).show();
-                                    Intent intent=new Intent(getApplicationContext(),TaiKhoanActivity.class);
+                                    Intent intent=new Intent(getApplicationContext(), TaiKhoanActivity.class);
                                     startActivity(intent);
                                     finish();
                                 } else {
@@ -98,6 +97,4 @@ public class DangNhapActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }

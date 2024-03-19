@@ -31,7 +31,6 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="30dp"
                     android:gravity="center|left"
-                    android:text="Hãy bắt đầu chuyến đi của riêng mình......."
                     android:textSize="16dp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -94,7 +93,7 @@
                     android:textSize="20dp" />
 
                 <Button
-                    android:id="@+id/btnSetting"
+                    android:id="@+id/btnChangePass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="10dp"
