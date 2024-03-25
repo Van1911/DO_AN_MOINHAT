@@ -33,7 +33,6 @@ public class HomeFragment extends Fragment {
     Button btnAdmin;
     FirebaseUser user;
     FirebaseAuth mAuth;
-
     private DatePickerDialog.OnDateSetListener dateSetListener;
 Context context;
     @SuppressLint("NonConstantResourceId")
@@ -51,6 +50,12 @@ Context context;
         btnNoiDen = view.findViewById(R.id.btnNoiDen);
         btnNgayKH=view.findViewById(R.id.btnNgayKH);
         btnAdmin=view.findViewById(R.id.btnAdmin);
+        btnTimKiem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             if(user.getEmail().equals("admin@gmail.com")){
