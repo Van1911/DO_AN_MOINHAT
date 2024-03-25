@@ -1,5 +1,7 @@
 package com.example.do_an;
 
+import static android.app.PendingIntent.getActivity;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class TaiKhoanActivity extends AppCompatActivity {
@@ -19,7 +22,8 @@ public class TaiKhoanActivity extends AppCompatActivity {
     TextView btnLogout;
     TextView txtback1;
     Button change_pass;
-    EditText edtPassLogin;
+
+private DangNhapActivity MdangNhapActivity;
     FirebaseAuth auth;
     FirebaseUser user;
     @Override
@@ -34,7 +38,8 @@ public class TaiKhoanActivity extends AppCompatActivity {
         txtback1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent i = new Intent(TaiKhoanActivity.this,HomeFragment.class);
+                startActivity(i);
             }
         });
         btnLogout.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +53,6 @@ public class TaiKhoanActivity extends AppCompatActivity {
         auth=FirebaseAuth.getInstance();
         user=auth.getCurrentUser();
         nameProfile.setText(user.getEmail());
-
-
+        passProfile.setText("********");
     }
 }

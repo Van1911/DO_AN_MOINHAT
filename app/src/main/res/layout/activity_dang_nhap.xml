@@ -74,7 +74,7 @@
             android:text="Đăng nhập" />
 
         <Button
-            android:id="@+id/buttonForgotPassword"
+            android:id="@+id/buttonForgotPasswordDN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/transparent"
@@ -83,14 +83,13 @@
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/btnDK"
+            android:id="@+id/btnTaoTK"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:background="@drawable/corner_rounded_blue"
             android:text="Tạo tài khoản"
-            android:textColor="@color/yellow"
-            app:backgroundTint="@null" />
+            android:textColor="@color/yellow" />
 
     </LinearLayout>
 
