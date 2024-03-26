@@ -14,8 +14,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 
@@ -27,12 +29,14 @@ import java.util.Calendar;
 
 public class HomeFragment extends Fragment {
     Button btnTimKiem;
-    Button btnNoiDi;
-    Button btnNoiDen;
+    EditText btnNoiDi;
+    EditText btnNoiDen;
     Button btnNgayKH;
     Button btnAdmin;
     FirebaseUser user;
     FirebaseAuth mAuth;
+
+
     private DatePickerDialog.OnDateSetListener dateSetListener;
 Context context;
     @SuppressLint("NonConstantResourceId")
@@ -100,22 +104,22 @@ Context context;
                 startActivity(i);
             }
         });
-        btnNoiDi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getActivity(), PlaceActivity.class);
-                i.putExtra("", "");
-                startActivity(i);
-            }
-        });
-        btnNoiDen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getActivity(), PlaceActivity.class);
-                i.putExtra("", "");
-                startActivity(i);
-            }
-        });
+//        btnNoiDi.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(getActivity(), PlaceActivity.class);
+//                i.putExtra("", "");
+//                startActivity(i);
+//            }
+//        });
+//        btnNoiDen.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(getActivity(), PlaceActivity.class);
+//                i.putExtra("", "");
+//                startActivity(i);
+//            }
+//        });
         return  view;
     }
 

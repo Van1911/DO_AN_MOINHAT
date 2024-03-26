@@ -109,7 +109,7 @@
         android:layout_weight="0"
         android:background="@drawable/vien_layout">
 
-        <Button
+        <EditText
             android:id="@+id/btnNoiDen"
             android:layout_width="match_parent"
             android:layout_height="80dp"
@@ -118,7 +118,7 @@
             android:layout_marginRight="40dp"
             android:background="@android:color/transparent"
             android:gravity="center|left"
-            android:text="Bến tàu Thủ Thiêm"
+            android:textColor="#FFFFFF"
             android:textSize="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -135,9 +135,10 @@
             app:layout_constraintHorizontal_bias="0.204"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.611" />
+            app:layout_constraintVertical_bias="0.611"
+            tools:ignore="TextSizeCheck" />
 
-        <Button
+        <EditText
             android:id="@+id/btnNoiDi"
             android:layout_width="match_parent"
             android:layout_height="80dp"
@@ -146,7 +147,7 @@
             android:layout_marginRight="40dp"
             android:background="@android:color/transparent"
             android:gravity="center|left"
-            android:text="Bến tàu Bạch Đằng"
+            android:textColor="#FFFFFF"
             android:textSize="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.562"
@@ -164,7 +165,8 @@
             app:layout_constraintHorizontal_bias="0.197"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.082" />
+            app:layout_constraintVertical_bias="0.082"
+            tools:ignore="TextSizeCheck" />
 
         <ImageView
             android:id="@+id/imageView"
