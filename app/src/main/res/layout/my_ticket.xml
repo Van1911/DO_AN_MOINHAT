@@ -16,22 +16,22 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView29"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:text="Còn 30 chỗ trống"
-            android:textColor="#2196F3"
-            android:textSize="12dp" />
-
-        <TextView
             android:id="@+id/textView28"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="----------------------------------------------------------"
+            android:layout_marginTop="10dp"
             android:textColor="@color/white" />
-
+        <TextView
+            android:id="@+id/tVemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="email"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
         <TextView
             android:id="@+id/tVnoidi"
             android:layout_width="match_parent"
@@ -71,14 +71,15 @@
             android:textColor="@color/white"
             android:textSize="15dp" />
 
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_datve"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:backgroundTint="@color/yellow"
-        android:text="Đặt vé" />
+<!--    <Button-->
+<!--        android:id="@+id/btn_huyve"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="0"-->
+<!--        android:backgroundTint="@color/yellow"-->
+<!--        android:text="Hủy vé" />-->
 
 </LinearLayout>

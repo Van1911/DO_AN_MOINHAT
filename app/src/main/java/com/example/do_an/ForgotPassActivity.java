@@ -18,11 +18,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class ForgotPassActivity extends AppCompatActivity {
-EditText fg_pass;
-Button btnForgotPass;
-Button btnback_fg_pass;
+    EditText fg_pass;
+    Button btnForgotPass;
+    Button btnback_fg_pass;
     String str_fg_pass;
-FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,14 +53,14 @@ FirebaseAuth mAuth;
     private void ResetPassword() {
         btnForgotPass.setVisibility(View.INVISIBLE);
         mAuth.sendPasswordResetEmail(str_fg_pass).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void unused) {
-                Toast.makeText(ForgotPassActivity.this,"Vui lòng kiểm tra tin nhắn email để reset mật khẩu",Toast.LENGTH_LONG).show();
-                Intent i = new Intent(ForgotPassActivity.this,DangNhapActivity.class);
-                startActivity(i);
-                finish();
-            }
-        })
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(ForgotPassActivity.this,"Vui lòng kiểm tra tin nhắn email để reset mật khẩu",Toast.LENGTH_LONG).show();
+                        Intent i = new Intent(ForgotPassActivity.this,DangNhapActivity.class);
+                        startActivity(i);
+                        finish();
+                    }
+                })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
@@ -68,6 +68,6 @@ FirebaseAuth mAuth;
                         btnForgotPass.setVisibility(View.VISIBLE);
                     }
                 });
-        }
+    }
 
 }

@@ -20,17 +20,32 @@
             android:layout_height="match_parent"
             android:layout_weight="5"
             android:backgroundTint="@color/yellow"
-            android:src="@drawable/icon_btnback_64" />
-
-        <Button
-            android:id="@+id/button11"
+            android:src="@drawable/baseline_arrow_back_ios_23" />
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="24dp"
-            android:backgroundTint="@color/yellow"
-            android:textColor="@color/white"
-            android:text="Sài Gòn WaterBus" />
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:text="Nơi đi"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+            <SearchView
+                android:id="@+id/src_noidi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/yellow"
+                android:layout_weight="1"/>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -45,26 +60,34 @@
             android:id="@+id/imageButton2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="3"
+            android:layout_weight="5"
             android:backgroundTint="@color/yellow"
             android:src="@drawable/icon_calendar_24" />
 
-        <Button
-            android:id="@+id/button14"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@color/yellow"
-            android:textSize="25dp"
-            android:text="Thời gian khởi hành" />
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
-        <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:backgroundTint="@color/yellow"
-            android:src="@drawable/icon_adjust_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:text="Nơi đến"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <SearchView
+                android:id="@+id/src_noiden"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/yellow"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
     </LinearLayout>
 
     <FrameLayout

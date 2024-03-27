@@ -99,6 +99,21 @@
                 android:textSize="20dp" />
         </LinearLayout>
 
+        <ListView
+            android:id="@+id/lv_myTicket"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

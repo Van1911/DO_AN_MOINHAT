@@ -32,37 +32,37 @@ public class TaiKhoanFragment extends Fragment {
 
         View view=inflater.inflate(R.layout.fragment_tai_khoan, container, false);
 
-            btnSetting=view.findViewById(R.id.btnChangePass);
-            btnSignin =view.findViewById(R.id.btnSignin);
-            txtUser=view.findViewById(R.id.txtUser);
-            auth=FirebaseAuth.getInstance();
-            user=auth.getCurrentUser();
-            s = presentlyUserName();
-            s = txtUser.getText().toString();
-            btnSignin.setOnClickListener((new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+        btnSetting=view.findViewById(R.id.btnChangePass);
+        btnSignin =view.findViewById(R.id.btnSignin);
+        txtUser=view.findViewById(R.id.txtUser);
+        auth=FirebaseAuth.getInstance();
+        user=auth.getCurrentUser();
+        s = presentlyUserName();
+        s = txtUser.getText().toString();
+        btnSignin.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-                    if(user == null){
-                        Intent i = new Intent(getActivity(),DangNhapActivity.class);
-                        startActivity(i);
-                    }
-                    else {
-
-                        Intent i = new Intent(getActivity(),TaiKhoanActivity.class);
-                        startActivity(i);
-
-                    }
-                }
-            }));
-            btnSetting.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                        Intent i = new Intent(getActivity(),SettingActivity.class);
-
+                if(user == null){
+                    Intent i = new Intent(getActivity(),DangNhapActivity.class);
                     startActivity(i);
                 }
-            });
+                else {
+
+                    Intent i = new Intent(getActivity(),TaiKhoanActivity.class);
+                    startActivity(i);
+
+                }
+            }
+        }));
+        btnSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(),SettingActivity.class);
+
+                startActivity(i);
+            }
+        });
         return view;
     }
     public String presentlyUserName(){
@@ -75,8 +75,8 @@ public class TaiKhoanFragment extends Fragment {
             return s;
         }else{
             txtUser.setText(user.getEmail());
-           s = txtUser.getText().toString();
-           return s;
+            s = txtUser.getText().toString();
+            return s;
         }
     }
 }

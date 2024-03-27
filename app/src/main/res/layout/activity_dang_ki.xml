@@ -45,6 +45,21 @@
                     android:clickable="true"
                     android:scaleType="centerCrop" />
             </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmail_DK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/corner_rounded_gray"
+                    android:ems="10"
+                    android:hint="Enter email"
+                    android:inputType="text"
+                    android:padding="16dp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
